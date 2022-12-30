@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <link rel="stylesheet" href="index.css" />
+
+  
+
+ <link rel="stylesheet" href="myindex.css" />
+
+
+  </head>
+  <body>
+    
+       <div id="canvas"  class="canvas-container"></div>
+
+     <!-- Boardgame  -->
+<!-- <div class="container text-center">
+  <div class="row">
+      <div class="col-10" id="gameboard">
+        <div id="canvas" class="canvas-container"></div>
+    </div>
+  </div>
+</div> -->
+
+     <!-- button box  -->
+    <div class="container- button-set">
+      <button class="button-71" id="stop" role="button">STOP(A)</button>
+      <button class="button-71" id="start" role="button">RESUME(B) </button>
+      <button class="button-71" id="reset-game" role="button">RESET(C)</button>
+      <button class="button-71" id="darken" role="button">DARK(D)</button>
+      <button class="button-71" id="random" role="button">RANDOM(E)</button>
+    <button class="button-71" id="gosper" role="button">GOSPER GUN(F)</button>
+
+
+    </div>
+
+    <!-- content box  
+  <div class="block"></div>
+       <div class="container-fluid rule-box" id="rule">     
+        <br>Rule 1 = survival, Rule 2 = survival, Rule 3 = reproduction</br>
+      </div>-->
+
+    <div class="container-md-center">
+      <!-- slider 1 -->
+        <div class="col-md-">
+          <span id="rangeFixed">FPS</span>
+          <input
+            class="range"
+            id="range-1"
+            type="range"
+            value="0"
+            min="0"
+            max="60"
+            onChange="rangeValueA(this.value)"
+            onmousemove="rangeSlideA(this.value)"/>
+
+          <span id="rangeValueA">0</span>
+        </div>
+    <!-- slider 1 -->
+        <div class="col-1"></div>
+     
+      <!-- slider 2  -->
+          <div class="col-md-">
+            <span id="rangeFixed">RULE</span>
+            <input
+              class="range"
+              id="range-2"
+              type="range"
+              value="0"
+              min="1"
+              max="3"
+              onChange="rangeValueB(this.value)"
+              onmousemove="rangeSlideB(this.value)"/>
+            <span id="rangeValueB">1</span>
+          </div>
+        <div>
+    </div>
+    <!-- slider 2 -->
+
+  <p id="keyB"></p>
+    <p id="keyA"></p>
+
+
+
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
