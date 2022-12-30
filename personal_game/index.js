@@ -8,7 +8,8 @@ let nextBoard;
 let backgroundColor = 255;
 let input1 = 2;
 let fr = 30; //starting FPS
-
+let keyboardX;
+let ketboardY;
 let gun = [
   [1, 5],
   [1, 6],
@@ -166,14 +167,14 @@ function generate() {
   }
 
   // Swap the nextBoard to be the current Board
-  [currentBoard, nextBoard] = [nextBoard, currentBoard];
+  //[currentBoard, nextBoard] = [nextBoard, currentBoard];
 }
 
 function genGun() {
   init();
-  frameRate(30);
+  frameRate(10);
   for (let i = 0; i < gun.length; i++) {
-    currentBoard[gun[i][0]][gun[i][1]] = 1;
+    currentBoard[gun[i][1]][gun[i][0]] = 1;
 
     fill(255, 255, 255);
     stroke(strokeColor);
@@ -232,7 +233,8 @@ function keyTyped() {
     genGun();
     loop();
   } else if (key === "r") {
-    Player();
+    rect(20, 1, 1, 1);
+
     console.log(this.value);
   } else {
   }
